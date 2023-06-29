@@ -8,6 +8,6 @@ class StarshipList(generics.ListAPIView):
     serializer_class = StarshipSerializer
 
 
-class StarshipDetail(generics.RetrieveAPIView):
+class StarshipDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Starship.objects.all()
     serializer_class = StarshipSerializer
