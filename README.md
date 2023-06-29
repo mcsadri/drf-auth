@@ -17,7 +17,7 @@ An CF401py introduction to using Django REST Framework to create an API, then â€
 - [ ] Rebuild a custom version of `Things API` demo project from scratch.
   - [ ] Replace `things_project` and `Thing` with your own application and model.
     - [ ] lab project = `starships_api_project`
-    - [ ] lab app = `starship`
+    - [ ] lab app = `starships`
   - [ ] Your model must have at least as many fields as demoâ€™s model.
   - [ ] Your model must have one field that is a foreign key to user.
   - [ ] NOTE: You are not required to build any templates for this lab.
