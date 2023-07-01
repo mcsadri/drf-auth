@@ -3,7 +3,7 @@ from .serializers import StarshipSerializer
 from .models import Starship
 
 
-class StarshipList(generics.ListAPIView):
+class StarshipList(generics.ListCreateAPIView):
     queryset = Starship.objects.all()
     serializer_class = StarshipSerializer
 
