@@ -50,4 +50,4 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 
 ## UAT
 
-- [ ] Modify provided unit tests in demo to work for your project.
+- [X] Modify provided unit tests in demo to work for your project.
