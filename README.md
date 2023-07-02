@@ -11,18 +11,17 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 
 ### General
 
-- [ ] Update the project from Class 21, `drf-api`, to complete the following functionality tasks:
-  - [ ] Restrict access to portions of your APIs data.
+- [X] Update the project from Class 21, `drf-api`, to complete the following functionality tasks:
+  - [X] Restrict access to portions of your APIs data.
   - [X] Switch over to using `postgres` from `sqlite`.
-- [ ] Customize your project to use different application features/models than what was used in demos.
+- [X] Customize your project to use different application features/models than what was used in demos.
 
 ### Django REST Framework
 
-- [ ] Make your site a DRF powered API as you did in previous lab.
-- [ ] Adjust project’s permissions so that only authenticated user’s have access to API.
-- [ ] Add a custom permission so that only appropriate users can update or delete it.
-  - [ ] Exactly what this means will depend on your application, so if you have any questions about “appropriate users” means reach out to TA/Instructor.
-- [ ] Add ability to switch user’s directly from browsable API.
+- [X] Make your site a DRF powered API as you did in previous lab.
+- [X] Adjust project’s permissions so that only authenticated user’s have access to API.
+- [X] Add a custom permission so that only appropriate users can update or delete it.
+- [X] Add ability to switch user’s directly from browsable API.
 
 ### Features - Docker
 
@@ -32,7 +31,7 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 - [X] enter `docker compose up --build` to start your site.
 - [X] add `postgres` as a service
   - Note: It is not required to include a volume so that data can persist when container is shut down.
-- [ ] Go to browsable api and confirm site properly restricts users based on their permissions.
+- [X] Go to browsable api and confirm site properly restricts users based on their permissions.
 
 ## Stretch Goals
 
