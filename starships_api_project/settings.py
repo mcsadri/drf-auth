@@ -25,12 +25,13 @@ SECRET_KEY = "django-insecure-@_c949xaapgl#9l9bv7)mz=6dccopq6-#!s3@l@t(bs7kdv#p5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "rest_framework",
     # standard
     "django.contrib.admin",
     "django.contrib.auth",
@@ -40,10 +41,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # 3rd party
-    'rest_framework',
+
 
     # local
-    'starships',
+    "starships",
 ]
 
 MIDDLEWARE = [
