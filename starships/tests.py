@@ -19,9 +19,13 @@ class StarshipTests(APITestCase):
             name='Kobayashi Maru',
             registry='none',
             ship_class='Class III neutronic fuel carrier',
-            commissioned='unknown',
+            commissioned='n/a',
         )
         test_starship.save()
+
+    # class 32
+    def setUp(self):
+        self.client.login(username="testuser1", password="pass")
 
     def test_starships_model(self):
         starship = Starship.objects.get(id=1)
@@ -34,7 +38,7 @@ class StarshipTests(APITestCase):
         self.assertEqual(actual_name, "Kobayashi Maru")
         self.assertEqual(actual_registry, "none")
         self.assertEqual(actual_ship_class, "Class III neutronic fuel carrier")
-        self.assertEqual(actual_commissioned, "unknown")
+        self.assertEqual(actual_commissioned, "n/a")
 
     def test_get_starship_list(self):
         url = reverse("starship_list")
@@ -90,3 +94,10 @@ class StarshipTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         starships = Starship.objects.all()
         self.assertEqual(len(starships), 0)
+
+    # class 32
+    def test_authentication_required(self):
+        self.client.logout()
+        url = reverse("starship_list")
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
