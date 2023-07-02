@@ -145,6 +145,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # security setting for API
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # this is insecure
+        # 'rest_framework.permissions.AllowAny',  # this is insecure
+        'rest_framework.permissions.IsAuthenticated',  # requires a user to have authenticated to use any API methods
     ]
 }

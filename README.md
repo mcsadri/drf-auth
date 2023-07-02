@@ -13,7 +13,7 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 
 - [ ] Update the project from Class 21, `drf-api`, to complete the following functionality tasks:
   - [ ] Restrict access to portions of your APIs data.
-  - [ ] Switch over to using `postgres` from `sqlite`.
+  - [X] Switch over to using `postgres` from `sqlite`.
 - [ ] Customize your project to use different application features/models than what was used in demos.
 
 ### Django REST Framework
@@ -27,10 +27,10 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 ### Features - Docker
 
 - **NOTE**: Refer to demo for built out `Dockerfile` and `docker-compose.yml` examples.
-- [ ] create `Dockerfile` based off `python:3.10-slim`
-- [ ] create `docker-compose.yml` to run Django app as a `web` service.
-- [ ] enter `docker compose up --build` to start your site.
-- [ ] add `postgres` as a service
+- [X] create `Dockerfile` based off `python:3.10-slim`
+- [X] create `docker-compose.yml` to run Django app as a `web` service.
+- [X] enter `docker compose up --build` to start your site.
+- [X] add `postgres` as a service
   - Note: It is not required to include a volume so that data can persist when container is shut down.
 - [ ] Go to browsable api and confirm site properly restricts users based on their permissions.
 
@@ -42,10 +42,10 @@ An CF401py introduction to using Permissions and Postgresql Database using Djang
 
 ## Implementation Notes
 
-- [ ] You should NOT be running Postgres directly on host machine.
-  - [ ] This means that operations like `createsuperuser` and `migrate` will need to happen inside the container.
-  - [ ] For example…
-    - [ ] docker compose run web python manage.py migrate
+- [X] You should NOT be running Postgres directly on host machine.
+  - [X] This means that operations like `createsuperuser` and `migrate` will need to happen inside the container.
+  - For example…
+    - [X] docker compose run web python manage.py migrate
     - or:
     - [ ] docker compose run web bash
 
