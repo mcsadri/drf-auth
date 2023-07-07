@@ -11,10 +11,10 @@ An CF401py introduction to using to Authentication & Production Servers using JS
 
 ### Django
 
-- [ ] Add JWT Authentication to your API.
-  - [ ] Install needed libraries in project configuration and/or site settings.
-- [ ] Keep any pre-existing authentication so DRF Browsable API still usable.
-  - [ ] Install needed libraries in project configuration and/or site settings.
+- [X] Add JWT Authentication to your API.
+  - [X] Install needed libraries in project configuration and/or site settings.
+- [X] Keep any pre-existing authentication so DRF Browsable API still usable.
+  - [X] Install needed libraries in project configuration and/or site settings.
 
 ### Docker
 

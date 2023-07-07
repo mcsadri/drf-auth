@@ -147,5 +147,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.AllowAny',  # this is insecure
         'rest_framework.permissions.IsAuthenticated',  # requires a user to have authenticated to use any API methods
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  # validates if user is authenticated by a JWT
+        'rest_framework.authentication.SessionAuthentication',  # validates if user is using session authentication
+        'rest_framework.authentication.BasicAuthentication',  # validates if user is using HTTP authentication
+    ],
 }
