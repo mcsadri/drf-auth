@@ -150,7 +150,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',  # validates if user is authenticated by a JWT
-        'rest_framework.authentication.SessionAuthentication',  # validates if user is using session authentication
-        'rest_framework.authentication.BasicAuthentication',  # validates if user is using HTTP authentication
+        'rest_framework.authentication.SessionAuthentication',  # optional - validates if user is using session authentication
+        'rest_framework.authentication.BasicAuthentication',  # optional - validates if user is using HTTP authentication
     ],
 }
