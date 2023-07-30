@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", # location is important: after SecurityMiddleware, but before everything else?
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -136,6 +137,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = "static/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -149,6 +152,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',  # requires a user to have authenticated to use any API methods
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        # https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#
         'rest_framework_simplejwt.authentication.JWTAuthentication',  # validates if user is authenticated by a JWT
         'rest_framework.authentication.SessionAuthentication',  # optional - validates if user is using session authentication
         'rest_framework.authentication.BasicAuthentication',  # optional - validates if user is using HTTP authentication
